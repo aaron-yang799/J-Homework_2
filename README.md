@@ -1,1 +1,1 @@
-# Homework 2 - CS_3330
+# Homework 2 - CMP_SCI_3330
