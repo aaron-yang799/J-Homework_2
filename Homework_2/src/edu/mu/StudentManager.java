@@ -66,5 +66,25 @@ public class StudentManager {
 			}
 		}
 	}
+	
+	
+	
+	public boolean updateStudentGradeById(int id, double grade) {
+		
+		if(searchStudentById(id))
+		{
+			for(int i = 0; i < students.length; i++) {
+				if(students[i].equals(id)) {
+					students[i].setGrade(grade);
+					return true;
+				}
+			}
+			
+			
+		}
+		return false;
+
+		
+	}
 
 }
