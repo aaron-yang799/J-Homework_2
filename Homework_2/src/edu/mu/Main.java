@@ -8,7 +8,7 @@ public class Main {
 		
 		StudentManager manager = new StudentManager();
 		
-		manager.readFromFile("files/studentData.txt");
+		manager.readFromFile("studentData.txt");
 		
 	}
 

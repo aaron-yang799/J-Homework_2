@@ -11,7 +11,7 @@ public class StudentManager {
 	
 	public boolean readFromFile(String fileName) {
 		try {
-			FileInputStream inputStream = new FileInputStream(fileName);
+			FileInputStream inputStream = new FileInputStream("files/" + fileName);
 			
 			Scanner scanner = new Scanner(inputStream);
 	
