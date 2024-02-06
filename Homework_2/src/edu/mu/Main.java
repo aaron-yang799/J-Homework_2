@@ -12,9 +12,10 @@ public class Main {
 		System.out.println("displayStudents results: ");
 		studentManager.displayStudents();
 		// Search for a student by ID.
-		System.out.println("searchStudentByID results: ");
+		System.out.println("\nsearchStudentByID results: ");
 		boolean studentFound = studentManager.searchStudentById(101);
 		// Update the grade of a student by ID.
+		System.out.println("\nUpdated student grade by ID results: ");
 		boolean studentGradeUpdateStatus = studentManager.updateStudentGradeById(102, 95);
 		// Display all students after the update.
 		studentManager.displayStudents();
