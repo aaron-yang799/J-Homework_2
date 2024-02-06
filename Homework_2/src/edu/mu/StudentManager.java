@@ -56,5 +56,15 @@ public class StudentManager {
 	    return newArray;
 	}
 	
+	
+	public void displayStudents() {
+		if(students == null) {
+			System.out.println("Students array is empty.");
+		} else {
+			for(int i = 0; i < students.length; i++) {
+				System.out.println(students[i]);
+			}
+		}
+	}
 
 }
