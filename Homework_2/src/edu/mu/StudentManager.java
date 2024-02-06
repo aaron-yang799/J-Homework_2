@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class StudentManager {
 	
-	Student[] students;
+	Student[] students = null;
 	
 	public boolean readFromFile(String fileName) {
 		try {
@@ -15,12 +15,18 @@ public class StudentManager {
 			
 			Scanner scanner = new Scanner(inputStream);
 	
-			while(scanner.hasNextLine()) {
+			while(scanner.hasNextInt()) {
 				int id = scanner.nextInt();
-				String name = scanner.next();
-				double grade = scanner.nextInt();
-				Student student = new Student(id, name, grade); 
-				students = addToArray(students, student);
+				String fName = scanner.next();
+				String lName = scanner.next();
+				String name = fName + " " + lName;
+				double grade = scanner.nextDouble();
+				Student student = new Student(id, name, grade);
+				if(students == null) {
+					students = new Student[] {student};
+				}else{
+					students = addToArray(students, student);
+				}
 			};
 			scanner.close();
 			inputStream.close();
