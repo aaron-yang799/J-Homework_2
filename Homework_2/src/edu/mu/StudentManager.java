@@ -38,10 +38,23 @@ public class StudentManager {
 		}
 	}
 	
+	public boolean searchStudentById(int id) {
+		for(int i = 0; i < students.length; i++) {
+			if(students[i].equals(id)) {
+				System.out.println(students[i]);
+				return true;
+			}
+		}
+		System.out.println("ID does not exist.");
+		return false;
+	}
+	
 	private Student[] addToArray(Student[] oldArray, Student newStudent)
 	{
 	    Student[] newArray = Arrays.copyOf(oldArray, oldArray.length+1);
 	    newArray[oldArray.length] = newStudent;
 	    return newArray;
 	}
+	
+
 }
