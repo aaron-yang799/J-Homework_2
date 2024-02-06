@@ -10,6 +10,7 @@ public class Main {
 		
 		manager.readFromFile("studentData.txt");
 		
+		manager.searchStudentById(101);
 	}
 
 }
