@@ -46,25 +46,11 @@ public class Student {
 		return "Student [id=" + id + ", name=" + name + ", grade=" + grade + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(grade, id, name);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
+	public boolean equals(int id) {
+		if(this.getId() == id)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Student other = (Student) obj;
-		return Double.doubleToLongBits(grade) == Double.doubleToLongBits(other.grade) && id == other.id
-				&& Objects.equals(name, other.name);
+		return false;
 	}
-	 
-	
 	
 	
 }
